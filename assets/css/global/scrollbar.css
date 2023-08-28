@@ -1,0 +1,21 @@
+/* Personaliza a cor do scroll da página */
+html {
+    scrollbar-color: var(--cor-azul) var(--cor-preto);
+    scrollbar-width: thin;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: var(--cor-preto);
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--cor-azul);
+    width: 6px;
+    height: 6px;
+    border-radius: 10px;
+  }
+  

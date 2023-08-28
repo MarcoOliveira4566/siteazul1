@@ -1,0 +1,333 @@
+section#solucoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff00000d;
+    padding: 80px 150px;
+    position: relative;
+    overflow: hidden
+}
+
+.seta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    z-index: 3
+}
+
+.seta.avancar {
+    top: 0;
+    right: 0;
+    padding: 80px 80px 80px 15px;
+    background: linear-gradient(to right,rgba(7,7,17,0),rgba(7, 7, 17, 0.288))
+}
+
+.seta.voltar {
+    top: 0;
+    left: 0;
+    padding: 80px 40px 80px 15px;
+    background: linear-gradient(to left,rgba(7,7,17,0),rgba(7, 7, 17, 0.288))
+}
+
+.seta button {
+    background-color: transparent;
+    transition: all .3s
+}
+
+.seta button svg {
+    width: 60px;
+    min-width: 60px;
+    fill: var(--cor-branco)
+}
+
+.seta:hover button {
+    transform: scale(1.1)
+}
+
+.item.vazio {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 20px 60px;
+    overflow-x: scroll;
+    width: 120%;
+}
+
+
+.conteudo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 2;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px 80px 40px;
+    z-index: 1
+}
+
+.titulo h3 {
+    font-family: var(--regular);
+    font-size: clamp(.8rem,1vw,1rem);
+    color: var(--cor-preto);
+    letter-spacing: 10px;
+    margin: 5px 0 0
+}
+
+.titulo h2 {
+    font-family: var(--bold);
+    font-size: clamp(2rem,1vw,3rem);
+    color: var(--cor-preto);
+    text-transform: uppercase;
+    line-height: 1
+}
+
+.item {
+    display: flex;
+    padding: 5px;
+    width: 310px;
+    min-width: 310px;
+    max-width: 431px;
+    background-color: #1472ff10;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 15px;
+    margin: 0 10px 0 0
+}
+
+.item .quadro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-azul-escuro);
+    border-radius: 10px
+}
+
+.item .quadro .imagem {
+    height: 157px;
+    min-height: 157px;
+    width: 100%;
+    background-image: url(../../../../../files/imgquadro.jpg);
+    background-color: var(--cor-preto);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .3s
+}
+
+.item .quadro .texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 40px 20px
+}
+
+.item .quadro .texto h2 {
+    font-family: var(--bold);
+    font-size: clamp(1rem,1vw,1.2rem);
+    color: var(--cor-branco);
+    line-height: 1.5;
+    margin: 10px 0 0;
+    width: 100%;
+    max-width: 200px
+}
+
+.item .quadro .texto p {
+    font-family: var(--regular);
+    font-size: clamp(.7rem,1vw,.9rem);
+    color: var(--cor-branco);
+    opacity: .7;
+    line-height: 1.5;
+    margin: 10px 0 20px
+}
+
+.item .quadro .texto a {
+    font-family: var(--bold);
+    font-size: clamp(.8rem,1vw,1rem);
+    color: var(--cor-branco);
+    background-color: var(--cor-azul2);
+    box-shadow: 0 10px 30px 0 transparent;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: all .3s
+}
+
+.item .quadro .texto a:hover {
+    background-color: var(--cor-azul);
+    box-shadow: 0 10px 30px 0 rgba(0, 119, 255, 0.336);
+}
+
+/* imagem */
+section#solucoes .img{
+    position: relative;
+    width: 50%;
+  }
+  section#solucoes img.ultimoefeito2 {
+    position: absolute;
+    /* top: 300px; */
+    right: -480px;
+    width: 52%;
+    animation: mexendoefeito1 20s linear infinite;
+  }
+  @keyframes mexendoefeito1 {
+    0% {
+    transform: scale(1) rotate(0);
+    }
+    50% {
+    transform: scale(1.1) rotate(180deg);
+    }
+    100% {
+    transform: scale(1) rotate(360deg);
+    }
+  }
+
+  section#solucoes img.ultimoefeito1 {
+    position: absolute;
+    top: -250px;
+    left: -00px;
+    width: 27%;
+    opacity: 50%;
+  }
+
+  @media screen and (max-width: 1400px) {
+    section#solucoes img.ultimoefeito2 {
+        position: absolute;
+        bottom: -99px;
+        right: -187px;
+        width: 37%;
+        opacity: 50%;
+        animation: mexendoefeito1 20s linear infinite;
+      }
+    
+      section#solucoes img.ultimoefeito1 {
+        position: absolute;
+        top: -250px;
+        left: -0px;
+        width: 30%;
+        opacity: 50%;
+      }
+}
+
+
+@media screen and (max-width: 1000px) {
+    section#solucoes {
+        padding: 80px 16px;
+    }
+
+    section#solucoes .seta.avancar {
+        display: none;
+    }
+
+    .slide {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        width: 120%;
+        padding: 0px 150px 60px;
+    }
+
+    section#solucoes .seta.voltar {
+        display: none;
+    }
+    
+    section#solucoes img.ultimoefeito2 {
+        position: absolute;
+        width: 68%;
+        z-index: 1;
+        animation: mexendoefeito1 20s linear infinite;
+      }
+    
+      section#solucoes img.ultimoefeito1 {
+        position: absolute;
+        bottom: -250px;
+        left: 0px;
+        width: 370px;
+        opacity: 50%;
+      }
+
+    section#solucoes .conteudo1 {
+        display: flex;
+        justify-content: center;
+ 
+      }
+
+    .titulo {
+        padding:60px 20px 30px
+    }
+
+    .titulo h3 {
+        font-family: var(--regular);
+        font-size: clamp(.8rem,1vw,1rem);
+        color: var(--cor-preto);
+        letter-spacing: 5px;
+        margin: 5px 0 0;
+    }
+
+
+    .conteudo {
+        justify-content: flex-start;
+        padding: 0 0px 0 60px;
+    }
+
+    .item {
+        padding: 7px;
+        width: 280px;
+        min-width: 280px;
+        max-width: 280px;
+        margin: 0 5px
+    }
+
+    .item.vazio {
+        display: none
+    }
+
+    .item .quadro .imagem {
+        height: 146px;
+        min-height: 146px
+    }
+
+    .item .quadro .texto {
+        padding: 30px
+    }
+
+    
+
+}
+@media screen and (max-width: 612px) {
+    section#solucoes img.ultimoefeito2 {
+        position: absolute;
+        right: -130px;
+        width: 100%
+        
+}
+.slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 20px 60px;
+    overflow-x: scroll;
+    width: 120%;
+}
+}

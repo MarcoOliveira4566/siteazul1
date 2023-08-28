@@ -1,0 +1,205 @@
+/* <section id="apresentacao"> */
+section#apresentacao {
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 0 100px 0 150px;
+    background-color: var(--cor-fundo-cinza);
+    overflow: hidden;
+  }
+  section#apresentacao .texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 176px 0 211px 0;
+    z-index: 3;
+  }
+  /* titulo */
+  section#apresentacao .texto h1 {
+    font-family: var(--bold);
+    font-size: clamp(2.6rem, 1vw, 5.5rem);
+    color: var(--cor-verde-escuro);
+    max-width: 550px;
+  }
+  section#apresentacao .texto h1 span {
+    font-family: var(--bold);
+    font-size: clamp(2.6rem, 1vw, 4.5rem);
+    color: var(--cor-azul);
+    max-width: 400px;
+    background: radial-gradient(circle at 70%,var(--cor-azul-texto) 10%,var(--cor-azul2) 30%);
+    background-size: 400% 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    animation: textGradientAnimation 7s linear infinite
+    
+  }
+  section#apresentacao .texto a.principal:hover {
+    color: var(--cor-azul);
+    background: radial-gradient(circle at 70%,var(--cor-branco) 10%,var(--cor-fundo-cinza) 30%);
+    background-size: 400% 400%;
+    animation: textGradientAnimation 5s linear infinite;
+    box-shadow: 4px 5px 16px 0px #00000026;
+    transition: 0.3s all;
+  }
+  section#apresentacao .texto a.principal img {
+    max-width: 20px;
+    margin: 0 10px 0 0;
+    transition: 0.3s all;
+  }
+
+
+  /* subtitulo */
+  section#apresentacao .texto p {
+    font-family: var(--regular);
+    font-size: clamp(0.8rem, 1vw, 3.2rem);
+    color: var(--cor-verde-escuro);
+    line-height: 1.5;
+    margin: 20px 0;
+    max-width: 550px;
+  }
+  /* botão ação */
+  section#apresentacao .texto a.principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: var(--bold);
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    text-transform: uppercase;
+    color: var(--cor-branco);
+    background: radial-gradient(circle at 70%,var(--cor-azul) 10%,var(--cor-azul2) 30%);
+    background-size: 400% 400%;
+    border-radius: 10px;
+    animation: textGradientAnimation 5s linear infinite;
+    transition: 0.3s all;
+  }
+
+  @keyframes textGradientAnimation {
+    0% {
+        background-position: 50% 30%
+    }
+
+    25% {
+        background-position: 100% 10%
+    }
+
+    50% {
+        background-position: 100% 90%
+    }
+
+    75% {
+        background-position: 60% 90%
+    }
+
+    to {
+        background-position: 50% 30%
+    }
+}
+
+  /* imagem */
+  section#apresentacao .imagem {
+    position: relative;
+    width: 50%;
+  }
+  section#apresentacao img.efeito1 {
+    position: absolute;
+    bottom: -22px;
+    right: 80px;
+    width: 52%;
+    animation: mexendoefeito1 20s linear infinite;
+  }
+  @keyframes mexendoefeito1 {
+    0% {
+    transform: scale(1) rotate(0);
+    }
+    50% {
+    transform: scale(1.1) rotate(180deg);
+    }
+    100% {
+    transform: scale(1) rotate(360deg);
+    }
+  }
+
+  section#apresentacao img.efeito2 {
+    position: absolute;
+    top: -400px;
+    left: -400px;
+    width: 45%;
+    opacity: 50%;
+  }
+
+  section#apresentacao img.principal {
+    position: absolute;
+    bottom: 120px;
+    right: 220px;
+    width: 34%;
+    z-index: 1;
+    animation: mexendoprincipal 15s linear infinite;
+  }
+  @keyframes mexendoprincipal {
+    0% {
+    transform: scale(1) rotate(5deg)
+    }
+    50% {
+    transform: scale(1.1) rotate(-2.5deg)
+    }
+    100% {
+    transform: scale(1) rotate(5deg)
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    section#apresentacao {
+      padding: 0 30px;
+    }
+    section#apresentacao .texto {
+      padding: 70px 0 80% 0;
+      z-index: 3;
+    }
+    /* titulo */
+    section#apresentacao .texto h1 {
+      max-width: 300px;
+      font-size: clamp(2.0rem, 1vw, 3.0rem);
+    }
+    section#apresentacao .texto h1 span{
+      font-size: clamp(2.0rem, 1vw, 3.0rem);
+    }
+    /* subtitulo */
+    section#apresentacao .texto p {
+      margin: 15px 0;
+    }
+    /* botão ação */
+    section#apresentacao .texto a.principal {
+      padding: 15px;
+    }
+    section#apresentacao .texto a.principal img {
+      max-width: 15px;
+      margin: 0 10px 0 0;
+      transition: 0.3s all;
+    }
+    /* imagem */
+    section#apresentacao .imagem {
+      position: relative;
+      width: 100%;
+    }
+    section#apresentacao img.efeito1 {
+      position: absolute;
+      top: unset;
+      bottom: -10%;
+      right: 0;
+      width: 100%;
+    }
+    section#apresentacao img.principal {
+      position: absolute;
+      top: unset;
+      bottom: 0%;
+      right: 15%;
+      width: 62%;
+      z-index: 1;
+    }
+  }
+  

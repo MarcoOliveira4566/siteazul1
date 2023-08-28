@@ -1,0 +1,17 @@
+/* Essas são as variáveis para usar no site*/
+:root {
+    --cor-branco: #FFFFFF;
+    --cor-preto: #1c1e2c;
+  
+    --cor-fundo-cinza: #EDEDF8;
+  
+    --cor-azul-escuro: #141B2A;
+
+    --cor-azul: #38BFF8;
+    --cor-azul-texto: #6bd3ff;
+    --cor-azul2: #00A3FF;
+  
+    --regular: 'mark-pro-regular';
+    --bold: 'mark-pro-bold';
+  }
+  

@@ -1,0 +1,56 @@
+section.faixa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 80px;
+    overflow: hidden;
+    width: 100%;
+    background-color: var(--cor-azul)
+}
+
+.conteudos {
+    display: flex;
+    animation: slide 50s linear infinite;
+    width: 2400px
+}
+
+.itemF {
+    display: flex;
+    align-items: center;
+    margin: 0 40px 0 0
+}
+
+.itemF svg {
+    width: 10px;
+    min-width: 10px;
+    fill: #ffffff;
+    margin: 0 40px 0 0
+}
+
+.itemF p {
+    font-family: var(--regular);
+    font-size: clamp(.6rem,1vw,.8rem);
+    color: rgb(255, 255, 255)
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(0)
+    }
+
+    to {
+        transform: translate(-1000px)
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .itemF {
+        display:flex;
+        align-items: center;
+        margin: 0 20px 0 0
+    }
+
+    .itemF svg {
+        margin: 0 20px 0 0
+    }
+}
